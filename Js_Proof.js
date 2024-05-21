@@ -1,16 +1,21 @@
 let nftFolder = [];
 
+// mintNFT function creates a new NFT that accepts user input as function parameters. 
 function mintNFT(name_input, description_input, owner_input){
+
+    //nft_object is an object that helps in creating a NFT which are capable of holding metadata like name, description and owner 
     const nft_object = {
         name: name_input,
         description: description_input,
         owner: owner_input
     };
-    
+
+    // after we have minted a NFT, it's time to add it in our nftFolder which is a collection of all NFTs
     nftFolder.push(nft_object);
     console.log("Currently accessed NFT: " + name_input);
 }
 
+// In order to iterate through all of our NFTs presnt in nftFolder, we use a function "listNFTs" and display all the necessary information
 function listNFTs(){
 
     for (let i = 0; i < nftFolder.length; i++){
